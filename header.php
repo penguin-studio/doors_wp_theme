@@ -31,7 +31,8 @@
     			<div class="header-center-wrapp">
     				<ul class="contacts-nav">
     					<li class="contacts-nav__address">Санкт-Петербург пр.Обуховской Обороны 76 лит. А оф.102 </li>
-    					<li class="contacts-nav__phone">+7 (812) 923-93-93 </li>
+    					<li class="contacts-nav__phone">+7 (812) 923-93-93</li>
+    					<li class="contacts-nav__urban-phone">+7 (812) 412-93-88</li>
     				</ul>
     				<?php get_search_form(); ?>
     			</div>

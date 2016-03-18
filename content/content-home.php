@@ -1,6 +1,7 @@
 <?php get_sidebar(); ?>
 
 <section class="content-right">
+
 			<div class="content-right__row">
 				<div class="content-right__item">
 					<img src="<?php bloginfo('template_url'); ?>/images/door.png">

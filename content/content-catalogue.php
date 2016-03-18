@@ -1,7 +1,7 @@
 <?php get_sidebar(); ?>
 
 <section class="content-right">
-			<h2 class="main-title">Новинки</h2>
+			<h1 class="main-title"><?php the_title(); ?></h1>
             			<div class="content-slider">
             				<div class="content-right__item">
             					<img src="<?php bloginfo('template_url'); ?>/images/door.png">
