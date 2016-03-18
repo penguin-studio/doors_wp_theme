@@ -10,9 +10,9 @@
 						<p class="bottom-price">12 350 руб.</p>
 					</div>
 					<div class="bottom-hidden">
-						<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
-						<button class="bottom-hidden-btn btn" type="button">Добавить в козину</button>
-						<button class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</button>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Купить в один клик</a>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Добавить в козину</a>
+						<a href="#" class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</a>
 					</div>
 				</div>
 				<div class="content-right__item">
@@ -23,9 +23,9 @@
 						<p class="bottom-price">12 350 руб.</p>
 					</div>
 					<div class="bottom-hidden">
-						<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
-						<button class="bottom-hidden-btn btn" type="button">Добавить в козину</button>
-						<button class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</button>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Купить в один клик</a>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Добавить в козину</a>
+						<a href="#" class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</a>
 					</div>
 				</div>
 				<div class="content-right__item content-right__item-last">
@@ -36,9 +36,9 @@
 						<p class="bottom-price">12 350 руб.</p>
 					</div>
 					<div class="bottom-hidden">
-						<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
-						<button class="bottom-hidden-btn btn" type="button">Добавить в козину</button>
-						<button class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</button>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Купить в один клик</a>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Добавить в козину</a>
+						<a href="#" class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -51,9 +51,9 @@
 						<p class="bottom-price">12 350 руб.</p>
 					</div>
 					<div class="bottom-hidden">
-						<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
-						<button class="bottom-hidden-btn btn" type="button">Добавить в козину</button>
-						<button class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</button>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Купить в один клик</a>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Добавить в козину</a>
+						<a href="#" class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</a>
 					</div>
 				</div>
 				<div class="content-right__item">
@@ -64,9 +64,9 @@
 						<p class="bottom-price">12 350 руб.</p>
 					</div>
 					<div class="bottom-hidden">
-						<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
-						<button class="bottom-hidden-btn btn" type="button">Добавить в козину</button>
-						<button class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</button>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Купить в один клик</a>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Добавить в козину</a>
+						<a href="#" class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</a>
 					</div>
 				</div>
 				<div class="content-right__item content-right__item-last">
@@ -77,9 +77,9 @@
 						<p class="bottom-price">12 350 руб.</p>
 					</div>
 					<div class="bottom-hidden">
-						<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
-						<button class="bottom-hidden-btn btn" type="button">Добавить в козину</button>
-						<button class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</button>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Купить в один клик</a>
+						<a href="#" class="bottom-hidden-btn btn" type="button">Добавить в козину</a>
+						<a href="#" class="bottom-hidden-btn bottom-hidden-btn-next btn" type="button">Подробнее</a>
 					</div>
 				</div>
 			</div>
