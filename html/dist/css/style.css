@@ -74,8 +74,7 @@ textarea {
 
 .main-title {
   font-size: 36px;
-  text-align: center;
-  margin: 20px 0; }
+  text-align: center; }
 
 .main-title__card-item {
   font-size: 25px; }
@@ -196,8 +195,6 @@ textarea {
     clear: both; }
   .main-nav .main-nav__list {
     margin: 0 250px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .main-nav .main-nav__list:before, .main-nav .main-nav__list:after {
       content: "";
@@ -217,12 +214,9 @@ textarea {
       width: 100%;
       padding: 0 5px;
       text-align: center;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box; }
     .main-nav .main-nav__list .current-menu-item a {
       background: #fdfdfd;
-      background: -webkit-linear-gradient(legacy-direction(#cdcdcd 10%), #fdfdfd 90%);
       background: linear-gradient(#cdcdcd 10%, #fdfdfd 90%);
       border-bottom: 4px solid #9dc808; }
 
@@ -231,15 +225,13 @@ textarea {
   margin: 70px 0 0 0; }
 
 .advantages-content {
-  margin: 60px 0; }
+  margin-top: 60px; }
   .advantages-content:before, .advantages-content:after {
     content: "";
     display: table; }
   .advantages-content:after {
     clear: both; }
   .advantages-content .advantages-content__item {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
     width: 20%;
@@ -256,20 +248,18 @@ textarea {
     .advantages-content .advantages-content__item .advantages-content__item-desc-m {
       margin-top: -9px; }
 
-.main-content:before, .main-content:after {
-  content: "";
-  display: table; }
-
-.main-content:after {
-  clear: both; }
+.main-content {
+  margin-top: 70px; }
+  .main-content:before, .main-content:after {
+    content: "";
+    display: table; }
+  .main-content:after {
+    clear: both; }
 
 .left-sidebar {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 20%;
-  float: left;
-  margin-top: 30px; }
+  float: left; }
   .left-sidebar .menu-aside-menu-container {
     margin: 0 auto;
     max-width: 100%;
@@ -282,8 +272,6 @@ textarea {
     .left-sidebar .menu-aside-menu-container > ul > li {
       position: relative; }
       .left-sidebar .menu-aside-menu-container > ul > li > a {
-        -webkit-box-shadow: 0 1px 0 0 rgba(250, 250, 250, 0.1) inset;
-        -moz-box-shadow: 0 1px 0 0 rgba(250, 250, 250, 0.1) inset;
         -ms-box-shadow: 0 1px 0 0 rgba(250, 250, 250, 0.1) inset;
         box-shadow: 0 1px 0 0 rgba(250, 250, 250, 0.1) inset;
         display: block;
@@ -297,8 +285,6 @@ textarea {
         .left-sidebar .menu-aside-menu-container > ul > li > a:hover, .left-sidebar .menu-aside-menu-container > ul > li > a :active {
           color: #9dc808; }
       .left-sidebar .menu-aside-menu-container > ul > li .sub-menu {
-        -webkit-box-shadow: inset 0 0 50px #bbb;
-        -moz-box-shadow: inset 0 0 50px #bbb;
         -ms-box-shadow: inset 0 0 50px #bbb;
         box-shadow: inset 0 0 50px #bbb;
         counter-reset: items;
@@ -341,8 +327,6 @@ textarea {
     margin-left: 10px;
     display: inline-block;
     padding: 5px 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
 .content-right__row {
@@ -354,8 +338,6 @@ textarea {
     clear: both; }
 
 .content-right {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: right;
   width: 75%;
@@ -367,13 +349,10 @@ textarea {
     clear: both; }
   .content-right .main-title {
     margin: 15px 0; }
+    .content-right .main-title:first-child {
+      margin: -15px 0 15px 0; }
   .content-right .content-right__item {
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     width: 277px;
@@ -385,9 +364,6 @@ textarea {
     overflow: hidden; }
     .content-right .content-right__item:hover .bottom-hidden {
       height: 128px;
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out; }
     .content-right .content-right__item .bottom {
       margin-top: 15px;
@@ -402,9 +378,6 @@ textarea {
       .content-right .content-right__item .bottom .bottom-price {
         font-weight: 900; }
     .content-right .content-right__item .bottom-hidden {
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
       width: 92%;
       background-color: #e7e7e7;
@@ -475,16 +448,12 @@ textarea {
     width: 284px; }
 
 .content-right-first {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 35%;
   float: left;
   padding: 0 15px; }
 
 .content-right-second {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 65%;
   padding: 0 15px;
@@ -562,9 +531,6 @@ textarea {
   position: absolute;
   bottom: 0;
   background: rgba(231, 231, 231, 0.5);
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
   transition: all 1s; }
 
 .table-cart__wrapp {
@@ -622,8 +588,6 @@ textarea {
     width: 33%;
     padding: 0 15px 0 55px;
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .contacts-col-wrapp .contacts-col:before {
       content: '';
@@ -679,15 +643,11 @@ textarea {
   .get-question input[type="text"], .get-question textarea {
     padding: 5px 10px;
     border: 1px solid #ccc;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
   .get-question .input-container {
     width: 50%;
     float: left;
     padding: 0 15px 0 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .get-question .input-container:before, .get-question .input-container:after {
       content: "";
