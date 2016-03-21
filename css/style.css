@@ -91,6 +91,9 @@ textarea {
   border: 1px solid #9dc808;
   color: #9dc808; }
 
+.images {
+  text-align: center; }
+
 .header {
   height: 120px;
   background-color: #f7f7f7; }
@@ -359,14 +362,15 @@ textarea {
   box-sizing: border-box;
   float: right;
   width: 75%;
-  padding: 0 15px; }
+  padding: 25px 15px; }
   .content-right:before, .content-right:after {
     content: "";
     display: table; }
   .content-right:after {
     clear: both; }
   .content-right .main-title {
-    margin: 15px 0; }
+    margin: 15px 0;
+    clear: both; }
   .content-right .content-right__item {
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
@@ -377,6 +381,7 @@ textarea {
     box-sizing: border-box;
     position: relative;
     width: 277px;
+    height: 475px;
     float: left;
     margin: 0 19px 0 0;
     border: 1px solid #666666;
@@ -390,6 +395,10 @@ textarea {
       -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out; }
     .content-right .content-right__item .bottom {
+      position: absolute;
+      bottom: 0;
+      min-height: 100px;
+      min-width: 93%;
       margin-top: 15px;
       background-color: #e7e7e7;
       padding: 10px; }
@@ -406,7 +415,7 @@ textarea {
       -o-transition: all 0.4s ease-in-out;
       -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
-      width: 92%;
+      width: 93%;
       background-color: #e7e7e7;
       position: absolute;
       bottom: -10px;
@@ -518,10 +527,8 @@ textarea {
     float: left; }
     .choice-box .choice-box__row .choice-box__row-text p:first-child {
       margin-bottom: 10px; }
-  .choice-box .choice-box__row .choice-box__row-radio {
-    float: right; }
-    .choice-box .choice-box__row .choice-box__row-radio div:first-child {
-      margin-bottom: 10px; }
+  .choice-box .choice-box__row .choice-box__row-radio div:first-child {
+    margin-bottom: 10px; }
 
 .price-container:before, .price-container:after {
   content: "";
@@ -652,6 +659,15 @@ textarea {
 
 .bottom-text {
   margin: 20px 0; }
+
+.quantity input[type="number"] {
+  padding: 10px;
+  background-color: #e7e7e7;
+  margin: 10px 0;
+  width: 30%; }
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+  background-color: #9dc808 !important; }
 
 .footer {
   background-color: #f7f7f7;

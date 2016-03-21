@@ -72,7 +72,13 @@ $woocommerce_loop['loop']++;
 		 */
 		do_action( 'woocommerce_shop_loop_item_title' );
 		?>
-		<p>Размеры:	2000х800 мм</p>
+		<?php
+		global $post;
+		$door_size         = get_post_meta($post->ID,'door_size', true);
+		?>
+			<?php if($door_size != ''):?>
+				<p>Размер: <?php echo esc_html($door_size);?></p>
+			<?php endif; ?>
 		<?php
 		/**
 		 * woocommerce_after_shop_loop_item_title hook.
@@ -84,7 +90,7 @@ $woocommerce_loop['loop']++;
 		?>
 	</div>
 	<div class="bottom-hidden">
-		<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
+		<button class="bottom-hidden-btn btn popup-link-2" type="button">Купить в один клик</button>
 		<?php
 		/**
 		 * woocommerce_after_shop_loop_item hook.

@@ -25,8 +25,17 @@
     				<a href="/"><img src="<?php echo esc_url($theme_path_uri); ?>/images/logo.png" height="74" width="340" alt="logo" title="logo"></a>
     			</div>
     			<div class="cart-wrapp">
-    				<a href="#">Корзина</a>
-    				<span>корзина пуста</span>
+					<?php
+						$cart_product_count = WC()->cart->get_cart_contents_count();
+						$cart_product_total_price = wp_kses(WC()->cart->get_cart_total(),'');
+					?>
+    				<a href="<?php echo esc_url(get_home_url().'/cart'); ?>">Корзина</a>
+					<?php if($cart_product_count == 0):?>
+    					<span>корзина пуста</span>
+					<?php endif; ?>
+					<?php if($cart_product_count > 0):?>
+						<span>(<?php echo esc_html($cart_product_count);?>) <?php echo $cart_product_total_price; ?></span>
+					<?php endif; ?>
     			</div>
     			<div class="header-center-wrapp">
     				<ul class="contacts-nav">

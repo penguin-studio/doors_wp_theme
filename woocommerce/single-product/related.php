@@ -90,7 +90,7 @@ if ( $products->have_posts() ) : ?>
 						?>
 					</div>
 					<div class="bottom-hidden">
-						<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
+						<button class="bottom-hidden-btn btn popup-link-2" type="button">Купить в один клик</button>
 						<?php
 						/**
 						 * woocommerce_after_shop_loop_item hook.

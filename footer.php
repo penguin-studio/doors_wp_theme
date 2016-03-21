@@ -35,6 +35,31 @@
 			</form>
 		</div>
 	</div>
+	<div class="popup-box" id="popup-box-1">
+        <div class="close">X</div>
+        <div class="top">
+            <h2>Товар добавлен в корзину</h2>
+            <p>Спасибо за заказ!</p>
+        </div>
+        <div class="bottom">
+            <a class="btn" href="#">Перейти в корзину</a>
+            <a class="btn" href="#">Продолжить покупки</a>
+        </div>
+    </div>
+    <div class="popup-box" id="popup-box-2">
+    	<div class="close">X</div>
+    	<div class="top">
+    		<h2>Купить в один клик</h2>
+    		<p>Для заказа заполните поля ниже</p>
+    	</div>
+    	<div class="bottom">
+    		<form method="post">
+    			<input type="text" class="modal-input" placeholder="Имя">
+    			<input type="text" class="modal-input" placeholder="Телефон">
+    			<input type="submit" class="btn btn-submit" placeholder="Отправить">
+    		</form>
+    	</div>
+    </div>
 </footer>
 <?php
 $theme_path_uri = get_template_directory_uri();

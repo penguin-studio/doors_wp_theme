@@ -47,7 +47,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	<div class="content-right-second">
 		<h2 class="main-title main-title__card-item"><?php echo esc_html(get_the_title()); ?></h2>
-
+		<?php
+			global $post;
+			$door_material     = get_post_meta($post->ID,'door_material', true);
+			$door_size         = get_post_meta($post->ID,'door_size', true);
+			$door_manufacturer = get_post_meta($post->ID,'door_manufacturer', true);
+			$door_color         = get_post_meta($post->ID,'door_color', true);
+		?>
+		<table class="card-item-description">
+			<?php if($door_material != ''):?>
+			<tr>
+				<td>Материал:</td>
+				<td><?php echo esc_html($door_material);?></td>
+			</tr>
+			<?php endif; ?>
+			<?php if($door_size != ''):?>
+			<tr>
+				<td>Размер:</td>
+				<td><?php echo esc_html($door_size);?></td>
+			</tr>
+			<?php endif; ?>
+			<?php if($door_manufacturer != ''):?>
+			<tr>
+				<td>Производитель:</td>
+				<td><?php echo esc_html($door_manufacturer);?></td>
+			</tr>
+			<?php endif; ?>
+			<?php if($door_color != ''):?>
+			<tr>
+				<td>Цвет:</td>
+				<td><?php echo esc_html($door_color);?></td>
+			</tr>
+			<?php endif; ?>
+		</table>
 		<p class="card-item-description-text"><?php echo esc_html(get_the_content()); ?></p>
 
 				<div class="price-container">

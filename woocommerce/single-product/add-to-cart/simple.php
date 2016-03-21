@@ -38,10 +38,11 @@ if ( ! $product->is_purchasable() ) {
 <?php if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+<form class="cart" method="post" enctype='multipart/form-data'>
 <div class="btn-container">
-	<form class="cart" method="post" enctype='multipart/form-data'>
+	<div class="choice-box">
 	 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-
+	</div>
 	 	<?php
 	 		if ( ! $product->is_sold_individually() ) {
 	 			woocommerce_quantity_input( array(
@@ -53,11 +54,11 @@ if ( ! $product->is_purchasable() ) {
 	 	?>
 
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
-		<button class="btn" type="button">Купить в один клик</button>
+		<button class="btn popup-link-2" type="button">Купить в один клик</button>
 	 	<button type="submit" class="btn catalogue-item__buy-btn single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-	</form>
 </div>
+</form>
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
