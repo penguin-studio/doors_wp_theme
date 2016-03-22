@@ -32,6 +32,46 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 //заголовок
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 
+add_action( 'woocommerce_archive_description', 'loop_fun');
+function loop_fun(){
+    global $wp_query;
+    $args = array();
+
+        $args = array_merge($args, $wp_query->query);
+        $args = array_merge($args, $wp_query->query_vars);
+        $args['meta_query'] = array('relation' => 'AND');
+
+        if(isset($_GET['filter_price_to']) && $_GET['filter_price_to']!=''
+            && isset($_GET['filter_price_from']) && $_GET['filter_price_from']!=''){
+            if($_GET['filter_price_to'] < $_GET['filter_price_from']){
+                $temp                      = $_GET['filter_price_to'];
+                $_GET['filter_price_to']   = $_GET['filter_price_from'];
+                $_GET['filter_price_from'] = $temp;
+            }
+        }
+
+        if(isset($_GET['filter_price_to']) && $_GET['filter_price_to']!=''){
+            $args['meta_query'][] = array(
+                'key'     => '_regular_price',
+                'value'   => $_GET['filter_price_to'],
+                'type' => 'numeric',
+                'compare' => '<='
+            );
+        }
+
+        if(isset($_GET['filter_price_from']) && $_GET['filter_price_from']!=''){
+            $args['meta_query'][] = array(
+                'key'     => '_regular_price',
+                'value'   => $_GET['filter_price_from'],
+                'type' => 'numeric',
+                'compare' => '>'
+            );
+        }
+
+    //echo '<pre>'; print_r($args); echo '</pre>';
+    $wp_query = new WP_Query($args);
+}
+
 add_filter( 'woocommerce_currency_symbol',  'penguin_currency_symbol' ,1,2);
 function penguin_currency_symbol( $symbol , $currency ){
     if(strcmp($currency,'RUB') == 0){
@@ -47,7 +87,7 @@ function penguin_woocommerce_template_loop_product_thumbnail(){
     global $post;
     $template = "<img src='%src%' alt='%alt%' />";
 
-    $img_src = get_the_post_thumbnail_url($post->ID,array(150,150));
+    $img_src = get_the_post_thumbnail_url($post->ID,array(190,350));
     $img_alt = get_the_title($post->ID);
 
     $template = str_replace('%src%',$img_src,$template);
@@ -146,5 +186,65 @@ function woo_remove_billing_checkout_fields( $fields ) {
 
     return $fields;
 }
+/**
+ * Функция отвечает за вывод категории
+ */
 
+ function penguin_woocommerce_cat_tree_view($el_layer = 0, $cat_id = 0){
+     $args = array(
+         'type'         => 'product',
+         'child_of'     => '',
+         'parent'       => ($cat_id == 0)?'':$cat_id,
+         'orderby'      => 'name',
+         'order'        => 'ASC',
+         'hide_empty'   => 1,
+         'hierarchical' => 'true',
+         'exclude'      => '',
+         'include'      => '',
+         'number'       => 0,
+         'taxonomy'     => 'product_cat'
+         // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+     );
+     $menu_layer_class = '';
+     if($el_layer == 0){
+         $menu_layer_class = 'topnav';
+     }
+
+     $second_layer = $el_layer+1;
+
+     $query_string = '';
+
+     if(isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] != ''){
+         $query_string = '?'.$_SERVER['QUERY_STRING'];
+     }
+
+     $categories = get_categories( $args );
+
+     if( $categories ){
+         echo '<ul class="'.$menu_layer_class.'">';
+         foreach( $categories as $cat ){
+             if($el_layer == 0)  {
+                 if($cat->parent == '') {
+                     echo '<li ondblclick="window.location.href = \'' . get_term_link($cat->slug, 'product_cat') . $query_string . '\' ">';
+                     echo '<a href="' . get_term_link($cat->slug, 'product_cat') . $query_string . '">';
+                     echo $cat->name;
+                     echo '</a>';
+                     penguin_woocommerce_cat_tree_view($second_layer, $cat->term_taxonomy_id);
+                     echo '</li>';
+                 }
+             } else {
+                 echo '<li ondblclick="window.location.href = \'' . get_term_link($cat->slug, 'product_cat') . $query_string . '\' ">';
+                 echo '<a href="' . get_term_link($cat->slug, 'product_cat') . $query_string . '">';
+                 echo $cat->name;
+                 echo '</a>';
+                 penguin_woocommerce_cat_tree_view($second_layer, $cat->term_taxonomy_id);
+                 echo '</li>';
+             }
+
+         }
+         echo '</ul>';
+     }else{
+         return 1;
+     }
+ }
 

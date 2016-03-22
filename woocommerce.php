@@ -14,6 +14,7 @@
                 <h2 class="main-title"><?php woocommerce_page_title(); ?></h2>
             <?php endif; ?>
             <?php woocommerce_content(); ?>
+            <?php //woocommerce_pagination(); ?>
         </section>
     </div>
 </section>

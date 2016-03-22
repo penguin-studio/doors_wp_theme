@@ -90,7 +90,7 @@ $woocommerce_loop['loop']++;
 		?>
 	</div>
 	<div class="bottom-hidden">
-		<button class="bottom-hidden-btn btn popup-link-2" type="button">Купить в один клик</button>
+		<button class="bottom-hidden-btn btn" type="button">Купить в один клик</button>
 		<?php
 		/**
 		 * woocommerce_after_shop_loop_item hook.
@@ -103,6 +103,10 @@ $woocommerce_loop['loop']++;
 		<a class="bottom-hidden-btn bottom-hidden-btn-next btn" href="<?php echo esc_url(get_permalink()); ?>">Подробнее</a>
 	</div>
 </div>
+<?php
+	global $woo_loop;
+	$woo_loop = $woocommerce_loop['loop'];
+?>
 <?php if($woocommerce_loop['loop']%3 == 0):?>
 </div>
 <?php endif; ?>

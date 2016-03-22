@@ -14,9 +14,10 @@
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
-global $woocommerce_loop;
+global $woo_loop ;
 ?>
-
-<?php if($woocommerce_loop['loop']%3 > 1):?>
-</ul>
+<?php if($woo_loop %3 > 0):?>
+    </div>
 <?php endif; ?>
+
+
